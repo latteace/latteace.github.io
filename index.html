@@ -17,7 +17,7 @@
                 <!-- BRAND -->
                 <div class="flex gap-x-2 items-center">
                     <!-- BURGER BUTTON -->
-                    <button class="not-sr-only lg:sr-only w-10 h-10 flex flex-col justify-center gap-y-1">
+                    <button @click="nav = !nav" class="not-sr-only lg:sr-only w-10 h-10 flex flex-col justify-center gap-y-1">
                         <div class="w-7 h-[4px] bg-white rounded-full"></div>
                         <div class="w-7 h-[4px] bg-white rounded-full"></div>
                         <div class="w-7 h-[4px] bg-white rounded-full"></div>
@@ -143,6 +143,27 @@
                     <a href="mailto:latteace.ik@gmail.com">
                         <img src="./img/mail.png" class="w-6 lg:w-max" alt="">
                     </a>
+                </div>
+            </div>
+        </div>
+        <div v-if="nav" @click="nav = false" class="fixed bg-black opacity-60 w-full h-full left-0 z-10">p</div>
+        <div class="fixed bg-[rgba(0,0,0,0.6)] h-full left-0 z-10 duration-300 overflow-hidden py-7 text-white" :class="nav ? 'w-72 px-7' : 'w-0 px-0' ">
+            <div class="w-full py-7 flex gap-x-3 items-center">
+                <img src="./img/logo_light.png" class="w-5 h-5" alt="">
+                <span class="text-lg">LATTEACE</span>
+            </div>
+            <div class="w-full h-full flex flex-col gap-y-1">
+                <div @click="goto('#'), nav = false" class="w-full py-3">
+                    <span>Home</span>
+                </div>
+                <div @click="goto('#services'), nav = false" class="w-full py-3">
+                    <span>Services</span>
+                </div>
+                <div @click="goto('#about'), nav = false" class="w-full py-3">
+                    <span>About</span>
+                </div>
+                <div @click="goto('#contact'), nav = false" class="w-full py-3">
+                    <span>Contact</span>
                 </div>
             </div>
         </div>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Latteace</title>
+</head>
+<body>
+    <div id="app" class="w-full h-full bg-[#001b22] flex flex-col">
+        <!-- NAVBAR -->
+        <div class="w-full h-20 fixed z-10 bg-[rgb(0,61,72,0.4)]">
+            <div class="w-full h-full px-[10vw] flex justify-between items-center text-white">
+                <!-- BRAND -->
+                <div class="flex gap-x-2 items-center">
+                    <!-- BURGER BUTTON -->
+                    <button class="not-sr-only lg:sr-only w-10 h-10 flex flex-col justify-center gap-y-1">
+                        <div class="w-7 h-[4px] bg-white rounded-full"></div>
+                        <div class="w-7 h-[4px] bg-white rounded-full"></div>
+                        <div class="w-7 h-[4px] bg-white rounded-full"></div>
+                    </button>
+                    <div class="w-4">
+                        <img class="sr-only lg:not-sr-only" src="./img/logo_light.png" alt="">
+                    </div>
+                    <p class="font-bold text-lg sr-only lg:not-sr-only">LATTEACE</p>
+                </div>
+                <!-- MENU -->
+                <div class="flex gap-x-10 sr-only lg:not-sr-only">
+                    <a href="#home" class="duration-300">Home</a>
+                    <a href="#services" class="duration-300">Services</a>
+                    <a href="#about" class="duration-300">About</a>
+                    <a href="#contact" class="duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+        <!-- HERO -->
+        <div id="home" class="bgImage h-screen w-full drop-shadow-2xl">
+            <div class="w-full h-full mx-auto px-5 flex flex-col justify-center items-center gap-y-16 mt-10">
+                <div>
+                    <!-- TITLE -->
+                    <h1 class="text-3xl md:text-[50px] lg:text-[75px] text-white font-bold text-center leading-tight animate__animated animate__zoomIn">MENGUBAH <br/> IDE MENJADI <br/> SOLUSI INOVATIF</h1>
+                    <!-- SUBTITLE -->
+                    <h3 class="mt-3 text-md lg:text-[18px] text-[#C0C0C0] text-center leading-tight w-4/5 mx-auto">Kami berupaya mengubah ide menjadi solusi yang tepat dan inovatif untuk mempermudah proses bisnis anda.</h3>
+                </div>
+                <button @click="goto('https://api.whatsapp.com/send?phone=628895190769&text=Hai Admin!')" class="bg-[#01BFD7] h-[50px] lg:h-[60px] w-max lg:w-[160px] text-md lg:text-[18px] font-semibold text-white rounded-full px-7 lg:px-5 hover:bg-[#008C9D]">Contact Us</button>
+            </div>
+        </div>
+        <!-- CONTENT -->
+        <div class="bg-white w-full h-full px-0 lg:px-[10vw]">
+            <!-- FLOAT BUTTON -->
+            <div class="fixed bottom-10 right-10 bg-[#04899A] h-14 lg:h-16 w-14 lg:w-16 rounded-full shadow-xl shadow-[rgb(0,0,0,0.25)] z-10">
+                <button @click="goto('https://api.whatsapp.com/send?phone=628895190769&text=Hai Admin!')" class="w-full h-full flex items-center justify-center">
+                    <img src="./img/chat.png" class="w-8 lg:w-9" alt="">
+                </button>
+            </div>
+            <!-- SERVICES -->
+            <div id="services" class="w-full mt-40 md:mt-60">
+                <div class="absolute right-0 mt-0 lg:-mt-24 w-[60px] lg:w-max">
+                    <img src="./img/dots1.png" alt="">
+                </div>
+                <!-- TITLE -->
+                <div class="flex flex-col items-center gap-y-3">
+                    <p class="text-xl lg:text-[30px]">MAIN SERVICES</p>
+                    <div class="w-[60px] lg:w-[81px] h-[5px] lg:h-[6px] rounded-full bg-[#47E0F4]"></div>
+                </div>
+                <!-- CONTENT -->
+                <div class="w-full flex flex-wrap gap-x-5 gap-y-5 justify-center mt-24 px-5">
+                    <div class="w-full lg:w-[35vw] h-max lg:h-[320px] bg-white border hover:drop-shadow-2xl hover:border-0 animate__animated animate__zoomIn animate__delay-2s flex flex-col gap-y-4 p-7">
+                        <img src="./img/web.png" alt="" class="w-9">
+                        <span class="leading-tight font-semibold">Web App <br /> Development</span>
+                        <p>Kembangkan potensi bisnis ke level berikutnya dengan web app yang dirancang khusus untuk memenuhi kebutuhan, dari konsep hingga peluncuran, kami siap membantu menghadirkan pengalaman digital yang luar biasa bagi pengguna Anda</p>
+                    </div>
+                    <div class="w-full lg:w-[35vw] h-max lg:h-[320px] bg-white border hover:drop-shadow-2xl hover:border-0 animate__animated animate__zoomIn animate__delay-2s flex flex-col gap-y-4 p-7">
+                        <img src="./img/mobile.png" alt="" class="w-5">
+                        <span class="leading-tight font-semibold">Mobile App <br /> Development</span>
+                        <p>Transformasikan ide-ide brilian Anda menjadi kenyataan digital dengan pengembangan mobile app yang inovatif. Dari desain intuitif hingga performa yang optimal, kami menyediakan solusi terbaik untuk memenuhi kebutuhan unik bisnis dan pengguna Anda.</p>
+                    </div>
+                    <div class="w-full lg:w-[35vw] h-max lg:h-[320px] bg-white border hover:drop-shadow-2xl hover:border-0 animate__animated animate__zoomIn animate__delay-3s flex flex-col gap-y-4 p-7">
+                        <img src="./img/digitstra.png" alt="" class="w-9">
+                        <span class="leading-tight font-semibold">Digital <br /> Strategy</span>
+                        <p>Bangun kehadiran digital yang kuat dengan strategi yang tepat. Kami memadukan keahlian dan teknologi terkini untuk membantu bisnis Anda mencapai tujuan digitalnya dengan sukses, memperkuat jangkauan, keterlibatan, dan konversi secara efektif.</p>
+                    </div>
+                    <div class="w-full lg:w-[35vw] h-max lg:h-[320px] bg-white border hover:drop-shadow-2xl hover:border-0 animate__animated animate__zoomIn animate__delay-3s flex flex-col gap-y-4 p-7">
+                        <img src="./img/uiux.png" alt="" class="w-8">
+                        <span class="leading-tight font-semibold">UI&UX Design <br /> Spacialist</span>
+                        <p>Optimalkan pengalaman pengguna Anda dengan desain UI/UX yang intuitif dan menarik. Kami menggabungkan kreativitas dan fungsionalitas untuk menciptakan antarmuka yang memukau, memastikan setiap interaksi pengguna menjadi pengalaman yang memuaskan dan efisien</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ABOUT -->
+            <div id="about" class="w-full mt-40 lg:mt-60 px-5">
+                <!-- TITLE -->
+                <div class="flex flex-col items-center gap-y-4">
+                    <p class="text-xl lg:text-[30px]">ABOUT</p>
+                    <div class="w-[60px] lg:w-[81px] h-[5px] lg:h-[6px] rounded-full bg-[#47E0F4]"></div>
+                </div>
+                <!-- CONTENT -->
+                <div class="w-full flex flex-col lg:flex-row flex-wrap gap-x-[2%] gap-y-5 justify-center items-center mt-24">
+                    <div class="w-full lg:w-[48%] animate__animated animate__zoomIn animate__delay-4s">
+                        <img src="./img/image1.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col w-full lg:w-[50%] gap-y-3 lg:gap-y-16 justify-center">
+                        <h1 class="text-xl font-semibold">Tentang Kami</h1>
+                        <p>Kami menghadirkan solusi perangkat lunak inovatif untuk memenuhi kebutuhan bisnis Anda. Dengan fokus pada kualitas, keandalan, dan pengalaman pengguna yang luar biasa, kami bertekad untuk membawa Anda ke level berikutnya dalam era teknologi</p>
+                    </div>
+                </div>
+            </div>
+            <!-- CONTACT -->
+            <div id="contact" class="w-full mt-40 lg:mt-60 z-10">
+                <!-- TITLE -->
+                <div class="flex flex-col items-center gap-y-4">
+                    <p class="text-xl lg:text-[30px]">CONTACT</p>
+                    <div class="w-[60px] lg:w-[81px] h-[5px] lg:h-[6px] rounded-full bg-[#47E0F4]"></div>
+                </div>
+                <!-- CONTENT -->
+                <div class="w-full mt-16 lg:mt-24 px-5">
+                    <div class="w-full h-40 bg-white drop-shadow-2xl flex flex-col lg:flex-row justify-center lg:justify-between gap-y-5 items-center px-10">
+                        <h1 class="sr-only lg:not-sr-only font-semibold text-xl">Ciptakan Solusi Inovatif <br/> di Era Digital Bersama Kami!</h1>
+                        <h1 class="not-sr-only lg:sr-only font-semibold text-center">Ciptakan Solusi Inovatif di Era Digital Bersama Kami!</h1>
+                        <button @click="goto('https://api.whatsapp.com/send?phone=628895190769&text=Hai Admin!')" class="bg-[#008CA6] h-[50px] lg:h-[55px] w-[120px] lg:w-[140px] text-md lg:text-lg text-white rounded-full px-5 hover:bg-[#007388]">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <div class="left-0 w-full h-[300px] bgFooter -mt-16 flex items-center text-white px-[10vw]">
+            <div class="w-full flex flex-col lg:flex-row gap-y-3 justify-between items-start lg:items-end mt-16">
+                <div class="w-[300px] flex flex-col">
+                    <span class="text-2xl">LATTEACE</span>
+                    <span class="text-gray-400">Jl. Garuda III Nolokerto, Kaliwungu Kendal, Jawa Tengah Indonesia</span>
+                    <span class="mt-5">© 2024 LATTEACE | All Rights Reserved</span>
+                </div>
+                <div class="flex gap-x-5">
+                    <a href="https://www.instagram.com/lattea.ce/">
+                        <img src="./img/ig.png" class="w-6 lg:w-max" alt="">
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=628895190769&text=Hai Admin!">
+                        <img src="./img/wa.png" class="w-6 lg:w-max" alt="">
+                    </a>
+                    <a href="mailto:latteace.ik@gmail.com">
+                        <img src="./img/mail.png" class="w-6 lg:w-max" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

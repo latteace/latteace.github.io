@@ -3,7 +3,7 @@ const { createApp, ref } = Vue
 createApp({
   data() {
     return {
-      
+      nav: false
     }
   },
   methods: {
